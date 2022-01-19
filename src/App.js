@@ -1,4 +1,4 @@
-import React, { createRef, useRef, useState } from 'react';
+import React, { createRef, useEffect, useRef, useState } from 'react';
 
 import './App.css';
 
@@ -9,6 +9,12 @@ const App = () => {
 
   const focusOnInput = () => textInputRef.current.focus();
   const increaseCounter = () => setCounter(counter + 1);
+
+  useEffect(
+    () => {
+      textInputRef.current.focus();
+    }, []
+  );
 
   console.log(textInputRef.current);
   console.log(numberInputRef.current);
