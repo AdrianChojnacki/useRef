@@ -3,8 +3,8 @@ import React, { createRef, useRef } from 'react';
 import './App.css';
 
 const App = () => {
-  const textInputRef = useRef();
-  const numberInputRef = createRef();
+  const textInputRef = useRef(true);
+  const numberInputRef = createRef(true);
 
   const focusOnInput = () => textInputRef.current.focus();
 
